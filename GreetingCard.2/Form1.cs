@@ -33,6 +33,8 @@ namespace GreetingCard._2
         private void button1_Click_1(object sender, EventArgs e)
         {
             button1.Visible = false;
+            button2.Visible = false;
+            button3.Visible = false;
 
             Graphics g = this.CreateGraphics();
             Pen drawPen = new Pen(Color.Black, 10);
@@ -299,8 +301,8 @@ namespace GreetingCard._2
             g.DrawString("A", Large, blackBrush, 210, 325);
 
             g.DrawString("Was this Your Card?", Ariel, whiteBrush, 400, 230);
-            button1.Visible = True;
-            button2.Visible = True;
+            button1.Visible = true;
+            button2.Visible = true;
 
             // Add "Awesome, I knew it."
             // And add a "Do you want to play again?" button
@@ -310,7 +312,7 @@ namespace GreetingCard._2
             Thread.Sleep(5000);
             g.Clear(Color.Black);
             
-            button3.Visible = True;
+            button3.Visible = true;
             
             g.DrawString("Play Again?", timesNewRoman, whiteBrush, 400, 230);
         }
