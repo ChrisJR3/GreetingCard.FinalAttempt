@@ -62,22 +62,22 @@ namespace GreetingCard._2
             diamond1[3] = new Point(45, 90);
 
             Point[] diamond2 = new Point[4];
-            diamond1[0] = new Point(165, 70);
-            diamond1[1] = new Point(185, 90);
-            diamond1[2] = new Point(165, 110);
-            diamond1[3] = new Point(145, 90);
+            diamond2[0] = new Point(165, 70);
+            diamond2[1] = new Point(185, 90);
+            diamond2[2] = new Point(165, 110);
+            diamond2[3] = new Point(145, 90);
 
             Point[] diamond3 = new Point[4];
-            diamond1[0] = new Point(265, 70);
-            diamond1[1] = new Point(285, 90);
-            diamond1[2] = new Point(265, 110);
-            diamond1[3] = new Point(245, 90);
+            diamond3[0] = new Point(265, 70);
+            diamond3[1] = new Point(285, 90);
+            diamond3[2] = new Point(265, 110);
+            diamond3[3] = new Point(245, 90);
 
             Point[] diamond4 = new Point[4];
-            diamond1[0] = new Point(365, 70);
-            diamond1[1] = new Point(385, 90);
-            diamond1[2] = new Point(365, 110);
-            diamond1[3] = new Point(345, 90);
+            diamond4[0] = new Point(365, 70);
+            diamond4[1] = new Point(385, 90);
+            diamond4[2] = new Point(365, 110);
+            diamond4[3] = new Point(345, 90);
 
             //Lower Half
 
@@ -409,9 +409,11 @@ namespace GreetingCard._2
             SolidBrush whiteBrush = new SolidBrush(Color.White);
             Graphics g = this.CreateGraphics();
             g.Clear(Color.Black);
+            
+            //make this scrolling text
 
             g.DrawString("Awesome. I knew it.", drawFont, whiteBrush, 400, 230);
-            g.DrawString("Play Again?", drawFont, whiteBrush, 400, 230);
+            g.DrawString("Play Again?", drawFont, whiteBrush, 400, 240);
 
             //button3.Visible = true;
         }
@@ -428,7 +430,7 @@ namespace GreetingCard._2
             g.Clear(Color.Black);
 
             g.DrawString("Awesome. I knew it.", drawFont, whiteBrush, 400, 230);
-            g.DrawString("Play Again?", drawFont, whiteBrush, 400, 230);
+            g.DrawString("Play Again?", drawFont, whiteBrush, 400, 240);
 
             //button3.Visible = true;
         }
