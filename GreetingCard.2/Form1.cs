@@ -10,11 +10,13 @@ using System.Media;
 using System.Windows.Forms;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 /// <summary>
 /// Created By: Chris Rouse
 /// Date: Sept 2018
 /// Description: A card trick.
 /// </summary>
+ 
 namespace GreetingCard._2
 {
     public partial class Background : Form
@@ -22,13 +24,20 @@ namespace GreetingCard._2
         public Background()
         {
             InitializeComponent();
-            button1.Visible = false;
+            //button.Visible = false;
             button2.Visible = false;
             button3.Visible = false;
         }
 
         private void Background_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            button.Visible = false;
+
             Graphics g = this.CreateGraphics();
             Pen drawPen = new Pen(Color.Black, 10);
 
@@ -39,7 +48,7 @@ namespace GreetingCard._2
             SolidBrush blackBrush = new SolidBrush(Color.Black);
             SolidBrush whiteBrush = new SolidBrush(Color.White);
 
-            Font drawFont = new Font("TimesNewRoman", 16, FontStyle.Bold);
+            Font timesNewRoman = new Font("TimesNewRoman", 16, FontStyle.Bold);
             Font Large = new Font("TimesNewRoman", 64, FontStyle.Bold);
             Font Ariel = new Font("Ariel", 16, FontStyle.Bold);
             Font Cards = new Font("Comfortaa", 16, FontStyle.Bold);
@@ -148,29 +157,33 @@ namespace GreetingCard._2
             g.DrawString("A", Cards, blackBrush, 575, 305);
             g.DrawString("A", Cards, blackBrush, 650, 425);
 
-            g.DrawString("Pick A Card, Any Card!", drawFont, whiteBrush, 220, 220);
-            g.DrawString("You Have 5 Seconds to Decide!", drawFont, whiteBrush, 200, 240);
+            g.DrawString("Pick A Card, Any Card!", timesNewRoman, whiteBrush, 220, 220);
+            g.DrawString("You Have 5 Seconds to Decide!", timesNewRoman, whiteBrush, 200, 240);
 
             Thread.Sleep(1000);
             g.Clear(Color.Red);
 
             g.DrawRectangle(drawPen, 30, 30, 100, 150);
             g.FillRectangle(whiteBrush, 30, 30, 100, 150);
+            g.FillPolygon(blackBrush, diamond1);
             g.DrawString("A", Cards, blackBrush, 35, 35);
             g.DrawString("A", Cards, blackBrush, 105, 155);
 
             g.DrawRectangle(drawPen, 210, 30, 100, 150);
             g.FillRectangle(whiteBrush, 210, 30, 100, 150);
+            g.FillPolygon(blackBrush, diamond2);
             g.DrawString("A", Cards, blackBrush, 215, 35);
             g.DrawString("A", Cards, blackBrush, 285, 155);
 
             g.DrawRectangle(drawPen, 390, 30, 100, 150);
             g.FillRectangle(whiteBrush, 390, 30, 100, 150);
+            g.FillPolygon(blackBrush, diamond3);
             g.DrawString("A", Cards, blackBrush, 395, 35);
             g.DrawString("A", Cards, blackBrush, 465, 155);
 
             g.DrawRectangle(drawPen, 570, 30, 100, 150);
             g.FillRectangle(whiteBrush, 570, 30, 100, 150);
+            g.FillPolygon(blackBrush, diamond4);
             g.DrawString("A", Cards, blackBrush, 575, 35);
             g.DrawString("A", Cards, blackBrush, 645, 155);
 
@@ -178,47 +191,55 @@ namespace GreetingCard._2
 
             g.DrawRectangle(drawPen, 30, 300, 100, 150);
             g.FillRectangle(whiteBrush, 30, 300, 100, 150);
+            g.FillPolygon(blackBrush, diamond5);
             g.DrawString("A", Cards, blackBrush, 35, 305);
             g.DrawString("A", Cards, blackBrush, 105, 425);
 
             g.DrawRectangle(drawPen, 210, 300, 100, 150);
             g.FillRectangle(whiteBrush, 210, 300, 100, 150);
+            g.FillPolygon(blackBrush, diamond6);
             g.DrawString("A", Cards, blackBrush, 215, 305);
             g.DrawString("A", Cards, blackBrush, 285, 425);
 
             g.DrawRectangle(drawPen, 390, 300, 100, 150);
             g.FillRectangle(whiteBrush, 390, 300, 100, 150);
+            g.FillPolygon(blackBrush, diamond7);
             g.DrawString("A", Cards, blackBrush, 395, 305);
             g.DrawString("A", Cards, blackBrush, 470, 425);
 
             g.DrawRectangle(drawPen, 570, 300, 100, 150);
             g.FillRectangle(whiteBrush, 570, 300, 100, 150);
+            g.FillPolygon(blackBrush, diamond8);
             g.DrawString("A", Cards, blackBrush, 575, 305);
             g.DrawString("A", Cards, blackBrush, 650, 425);
 
-            g.DrawString("Pick A Card, Any Card!", drawFont, whiteBrush, 220, 220);
-            g.DrawString("You Have 4 Seconds to Decide!", drawFont, whiteBrush, 200, 240);
+            g.DrawString("Pick A Card, Any Card!", timesNewRoman, whiteBrush, 220, 220);
+            g.DrawString("You Have 4 Seconds to Decide!", timesNewRoman, whiteBrush, 200, 240);
 
             Thread.Sleep(1000);
             g.Clear(Color.Red);
 
             g.DrawRectangle(drawPen, 30, 30, 100, 150);
             g.FillRectangle(whiteBrush, 30, 30, 100, 150);
+            g.FillPolygon(blackBrush, diamond1);
             g.DrawString("A", Cards, blackBrush, 35, 35);
             g.DrawString("A", Cards, blackBrush, 105, 155);
 
             g.DrawRectangle(drawPen, 210, 30, 100, 150);
             g.FillRectangle(whiteBrush, 210, 30, 100, 150);
+            g.FillPolygon(blackBrush, diamond2);
             g.DrawString("A", Cards, blackBrush, 215, 35);
             g.DrawString("A", Cards, blackBrush, 285, 155);
 
             g.DrawRectangle(drawPen, 390, 30, 100, 150);
             g.FillRectangle(whiteBrush, 390, 30, 100, 150);
+            g.FillPolygon(blackBrush, diamond3);
             g.DrawString("A", Cards, blackBrush, 395, 35);
             g.DrawString("A", Cards, blackBrush, 465, 155);
 
             g.DrawRectangle(drawPen, 570, 30, 100, 150);
             g.FillRectangle(whiteBrush, 570, 30, 100, 150);
+            g.FillPolygon(blackBrush, diamond4);
             g.DrawString("A", Cards, blackBrush, 575, 35);
             g.DrawString("A", Cards, blackBrush, 645, 155);
 
@@ -226,47 +247,55 @@ namespace GreetingCard._2
 
             g.DrawRectangle(drawPen, 30, 300, 100, 150);
             g.FillRectangle(whiteBrush, 30, 300, 100, 150);
+            g.FillPolygon(blackBrush, diamond5);
             g.DrawString("A", Cards, blackBrush, 35, 305);
             g.DrawString("A", Cards, blackBrush, 105, 425);
 
             g.DrawRectangle(drawPen, 210, 300, 100, 150);
             g.FillRectangle(whiteBrush, 210, 300, 100, 150);
+            g.FillPolygon(blackBrush, diamond6);
             g.DrawString("A", Cards, blackBrush, 215, 305);
             g.DrawString("A", Cards, blackBrush, 285, 425);
 
             g.DrawRectangle(drawPen, 390, 300, 100, 150);
             g.FillRectangle(whiteBrush, 390, 300, 100, 150);
+            g.FillPolygon(blackBrush, diamond7);
             g.DrawString("A", Cards, blackBrush, 395, 305);
             g.DrawString("A", Cards, blackBrush, 470, 425);
 
             g.DrawRectangle(drawPen, 570, 300, 100, 150);
             g.FillRectangle(whiteBrush, 570, 300, 100, 150);
+            g.FillPolygon(blackBrush, diamond8);
             g.DrawString("A", Cards, blackBrush, 575, 305);
             g.DrawString("A", Cards, blackBrush, 650, 425);
 
-            g.DrawString("Pick A Card, Any Card!", drawFont, whiteBrush, 220, 220);
-            g.DrawString("You Have 3 Seconds to Decide!", drawFont, whiteBrush, 200, 240);
+            g.DrawString("Pick A Card, Any Card!", timesNewRoman, whiteBrush, 220, 220);
+            g.DrawString("You Have 3 Seconds to Decide!", timesNewRoman, whiteBrush, 200, 240);
 
             Thread.Sleep(1000);
             g.Clear(Color.Red);
 
             g.DrawRectangle(drawPen, 30, 30, 100, 150);
             g.FillRectangle(whiteBrush, 30, 30, 100, 150);
+            g.FillPolygon(blackBrush, diamond1);
             g.DrawString("A", Cards, blackBrush, 35, 35);
             g.DrawString("A", Cards, blackBrush, 105, 155);
 
             g.DrawRectangle(drawPen, 210, 30, 100, 150);
             g.FillRectangle(whiteBrush, 210, 30, 100, 150);
+            g.FillPolygon(blackBrush, diamond2);
             g.DrawString("A", Cards, blackBrush, 215, 35);
             g.DrawString("A", Cards, blackBrush, 285, 155);
 
             g.DrawRectangle(drawPen, 390, 30, 100, 150);
             g.FillRectangle(whiteBrush, 390, 30, 100, 150);
+            g.FillPolygon(blackBrush, diamond3);
             g.DrawString("A", Cards, blackBrush, 395, 35);
             g.DrawString("A", Cards, blackBrush, 465, 155);
 
             g.DrawRectangle(drawPen, 570, 30, 100, 150);
             g.FillRectangle(whiteBrush, 570, 30, 100, 150);
+            g.FillPolygon(blackBrush, diamond4);
             g.DrawString("A", Cards, blackBrush, 575, 35);
             g.DrawString("A", Cards, blackBrush, 645, 155);
 
@@ -274,91 +303,55 @@ namespace GreetingCard._2
 
             g.DrawRectangle(drawPen, 30, 300, 100, 150);
             g.FillRectangle(whiteBrush, 30, 300, 100, 150);
+            g.FillPolygon(blackBrush, diamond5);
             g.DrawString("A", Cards, blackBrush, 35, 305);
             g.DrawString("A", Cards, blackBrush, 105, 425);
 
             g.DrawRectangle(drawPen, 210, 300, 100, 150);
             g.FillRectangle(whiteBrush, 210, 300, 100, 150);
+            g.FillPolygon(blackBrush, diamond6);
             g.DrawString("A", Cards, blackBrush, 215, 305);
             g.DrawString("A", Cards, blackBrush, 285, 425);
 
             g.DrawRectangle(drawPen, 390, 300, 100, 150);
             g.FillRectangle(whiteBrush, 390, 300, 100, 150);
+            g.FillPolygon(blackBrush, diamond7);
             g.DrawString("A", Cards, blackBrush, 395, 305);
             g.DrawString("A", Cards, blackBrush, 470, 425);
 
             g.DrawRectangle(drawPen, 570, 300, 100, 150);
             g.FillRectangle(whiteBrush, 570, 300, 100, 150);
+            g.FillPolygon(blackBrush, diamond8);
             g.DrawString("A", Cards, blackBrush, 575, 305);
             g.DrawString("A", Cards, blackBrush, 650, 425);
 
-            //Lower Cards
-
-            g.DrawRectangle(drawPen, 30, 30, 100, 150);
-            g.FillRectangle(whiteBrush, 30, 30, 100, 150);
-            g.DrawString("A", Cards, blackBrush, 35, 35);
-            g.DrawString("A", Cards, blackBrush, 105, 155);
-
-            g.DrawRectangle(drawPen, 210, 30, 100, 150);
-            g.FillRectangle(whiteBrush, 210, 30, 100, 150);
-            g.DrawString("A", Cards, blackBrush, 215, 35);
-            g.DrawString("A", Cards, blackBrush, 285, 155);
-
-            g.DrawRectangle(drawPen, 390, 30, 100, 150);
-            g.FillRectangle(whiteBrush, 390, 30, 100, 150);
-            g.DrawString("A", Cards, blackBrush, 395, 35);
-            g.DrawString("A", Cards, blackBrush, 465, 155);
-
-            g.DrawRectangle(drawPen, 570, 30, 100, 150);
-            g.FillRectangle(whiteBrush, 570, 30, 100, 150);
-            g.DrawString("A", Cards, blackBrush, 575, 35);
-            g.DrawString("A", Cards, blackBrush, 645, 155);
-
-            //Lower Cards
-
-            g.DrawRectangle(drawPen, 30, 300, 100, 150);
-            g.FillRectangle(whiteBrush, 30, 300, 100, 150);
-            g.DrawString("A", Cards, blackBrush, 35, 305);
-            g.DrawString("A", Cards, blackBrush, 105, 425);
-
-            g.DrawRectangle(drawPen, 210, 300, 100, 150);
-            g.FillRectangle(whiteBrush, 210, 300, 100, 150);
-            g.DrawString("A", Cards, blackBrush, 215, 305);
-            g.DrawString("A", Cards, blackBrush, 285, 425);
-
-            g.DrawRectangle(drawPen, 390, 300, 100, 150);
-            g.FillRectangle(whiteBrush, 390, 300, 100, 150);
-            g.DrawString("A", Cards, blackBrush, 395, 305);
-            g.DrawString("A", Cards, blackBrush, 470, 425);
-
-            g.DrawRectangle(drawPen, 570, 300, 100, 150);
-            g.FillRectangle(whiteBrush, 570, 300, 100, 150);
-            g.DrawString("A", Cards, blackBrush, 575, 305);
-            g.DrawString("A", Cards, blackBrush, 650, 425);
-
-            g.DrawString("Pick A Card, Any Card!", drawFont, whiteBrush, 220, 220);
-            g.DrawString("You Have 2 Seconds to Decide!", drawFont, whiteBrush, 200, 240);
+            g.DrawString("Pick A Card, Any Card!", timesNewRoman, whiteBrush, 220, 220);
+            g.DrawString("You Have 2 Seconds to Decide!", timesNewRoman, whiteBrush, 200, 240);
 
             Thread.Sleep(1000);
             g.Clear(Color.Red);
 
             g.DrawRectangle(drawPen, 30, 30, 100, 150);
             g.FillRectangle(whiteBrush, 30, 30, 100, 150);
+            g.FillPolygon(blackBrush, diamond1);
             g.DrawString("A", Cards, blackBrush, 35, 35);
             g.DrawString("A", Cards, blackBrush, 105, 155);
 
             g.DrawRectangle(drawPen, 210, 30, 100, 150);
             g.FillRectangle(whiteBrush, 210, 30, 100, 150);
+            g.FillPolygon(blackBrush, diamond2);
             g.DrawString("A", Cards, blackBrush, 215, 35);
             g.DrawString("A", Cards, blackBrush, 285, 155);
 
             g.DrawRectangle(drawPen, 390, 30, 100, 150);
             g.FillRectangle(whiteBrush, 390, 30, 100, 150);
+            g.FillPolygon(blackBrush, diamond3);
             g.DrawString("A", Cards, blackBrush, 395, 35);
             g.DrawString("A", Cards, blackBrush, 465, 155);
 
             g.DrawRectangle(drawPen, 570, 30, 100, 150);
             g.FillRectangle(whiteBrush, 570, 30, 100, 150);
+            g.FillPolygon(blackBrush, diamond4);
             g.DrawString("A", Cards, blackBrush, 575, 35);
             g.DrawString("A", Cards, blackBrush, 645, 155);
 
@@ -366,26 +359,30 @@ namespace GreetingCard._2
 
             g.DrawRectangle(drawPen, 30, 300, 100, 150);
             g.FillRectangle(whiteBrush, 30, 300, 100, 150);
+            g.FillPolygon(blackBrush, diamond5);
             g.DrawString("A", Cards, blackBrush, 35, 305);
             g.DrawString("A", Cards, blackBrush, 105, 425);
 
             g.DrawRectangle(drawPen, 210, 300, 100, 150);
             g.FillRectangle(whiteBrush, 210, 300, 100, 150);
+            g.FillPolygon(blackBrush, diamond6);
             g.DrawString("A", Cards, blackBrush, 215, 305);
             g.DrawString("A", Cards, blackBrush, 285, 425);
 
             g.DrawRectangle(drawPen, 390, 300, 100, 150);
             g.FillRectangle(whiteBrush, 390, 300, 100, 150);
+            g.FillPolygon(blackBrush, diamond7);
             g.DrawString("A", Cards, blackBrush, 395, 305);
             g.DrawString("A", Cards, blackBrush, 470, 425);
 
             g.DrawRectangle(drawPen, 570, 300, 100, 150);
             g.FillRectangle(whiteBrush, 570, 300, 100, 150);
+            g.FillPolygon(blackBrush, diamond8);
             g.DrawString("A", Cards, blackBrush, 575, 305);
             g.DrawString("A", Cards, blackBrush, 650, 425);
 
-            g.DrawString("Pick A Card, Any Card!", drawFont, whiteBrush, 220, 220);
-            g.DrawString("You Have 1 Second to Decide!", drawFont, whiteBrush, 200, 240);
+            g.DrawString("Pick A Card, Any Card!", timesNewRoman, whiteBrush, 220, 220);
+            g.DrawString("You Have 1 Second to Decide!", timesNewRoman, whiteBrush, 200, 240);
 
             Thread.Sleep(1000);
             g.Clear(Color.Red);
@@ -399,15 +396,14 @@ namespace GreetingCard._2
 
 
             g.DrawString("Was this Your Card?", Ariel, whiteBrush, 400, 230);
-
-            button1.Visible = true;
+            button.Visible = true;
             button2.Visible = true;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button_Click(object sender, EventArgs e)
         {
-            button1.Visible = false;
-            button1.Visible = false;
+            button.Visible = false;
+            button.Visible = false;
 
             Font drawFont = new Font("TimesNewRoman", 16, FontStyle.Bold);
             SolidBrush whiteBrush = new SolidBrush(Color.White);
@@ -420,15 +416,11 @@ namespace GreetingCard._2
             //button3.Visible = true;
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            button1.Visible = false;
-            button1.Visible = false;
+            button.Visible = false;
+            button.Visible = false;
 
             Font drawFont = new Font("TimesNewRoman", 16, FontStyle.Bold);
             SolidBrush whiteBrush = new SolidBrush(Color.White);
@@ -443,14 +435,13 @@ namespace GreetingCard._2
 
         private void button3_Click(object sender, EventArgs e)
         {
-            // Add "Awesome, I knew it."
-            // And add a "Do you want to play again?" button
-
-            //The Following is code for when you press one of the 'yes' buttons
-
-            //button3.Visible = true;
-
-            //g.DrawString("Play Again?", timesNewRoman, whiteBrush, 400, 230);
+            Font drawFont = new Font("TimesNewRoman", 16, FontStyle.Bold);
+            SolidBrush whiteBrush = new SolidBrush(Color.White);
+            Graphics g = this.CreateGraphics();
+            
+            button3.Visible = true;
+            
+            g.DrawString("Play Again?", drawFont, whiteBrush, 400, 230);
         }
     }
 }
