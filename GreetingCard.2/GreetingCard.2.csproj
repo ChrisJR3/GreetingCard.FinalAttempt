@@ -82,5 +82,14 @@
   <ItemGroup>
     <None Include="Resources\Back of Card.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dingSound.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\320905__suzenako__the-ding.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\411088__inspectorj__bell-candle-damper-a-h4n %281%29.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
